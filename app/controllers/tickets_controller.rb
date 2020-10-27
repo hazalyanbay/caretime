@@ -13,6 +13,10 @@ class TicketsController < ApplicationController
     end
   end
 
+  def edit
+    @ticket = Ticket.find(params[:id])
+  end
+
   def update
     @ticket = Ticket.find(params[:id])
     @ticket.update(ticket_params)
@@ -22,6 +26,6 @@ class TicketsController < ApplicationController
   private
 
   def ticket_params
-    params.require(:ticket).permit(:issue_type, :comment)
+    params.require(:ticket).permit(:issue_type, :comment, :status)
   end
 end
