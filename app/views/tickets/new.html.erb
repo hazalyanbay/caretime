@@ -1,0 +1,7 @@
+<<% Ticket.styles.each do |style| %>
+  <%= simple_form_for(@ticket) do |f| %>
+    <%= f.input :issue_type, as: :hidden, input_html: {value: style} %>
+      
+    <%= f.submit style  %>
+  <% end %>
+<% end %>
