@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_10_26_140938) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "victim_id", null: false
-    t.bigint "worker_id", null: false
+    t.bigint "worker_id"
     t.index ["victim_id"], name: "index_tickets_on_victim_id"
     t.index ["worker_id"], name: "index_tickets_on_worker_id"
   end
