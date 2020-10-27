@@ -1,0 +1,9 @@
+<h1>Heyo</h1>
+
+<div>
+  <%= simple_form_for [@user, @contact] do |f|%>
+    <%= f.input :full_name %>
+    <%= f.input :phone_number %>
+    <%= f.submit %>
+  <% end %>
+</div>
