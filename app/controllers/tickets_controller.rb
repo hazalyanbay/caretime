@@ -1,26 +1,40 @@
 class TicketsController < ApplicationController
-  before_action :ticket_id, only: [:show, :update]
+
+  before_action :set_ticket, only: [:show, :update]
   def index
     @tickets = Ticket.all
   end
 
   def show; end
 
-  #def edit; end
+  def new
+    @ticket = Ticket.new
+  end
+
+  def create
+    @ticket = Ticket.new(ticket_params)
+    @ticket.victim = current_user
+    if @ticket.save
+      redirect_to ticket_path(@ticket)
+    else
+      render :new
+    end
+  end
 
   def update
+    @ticket = Ticket.find(params[:id])
     @ticket.update(ticket_params)
-    redirect_to user_registration_path
-    # redirect path can change after setting the routes
+    redirect_to dashboard_path
   end
 
   private
 
-  def ticket_id
+
+  def set_ticket
     @ticket = Ticket.find(params[:id])
   end
 
   def ticket_params
-    params.require(:ticket).permit(:status, :comment)
+    params.require(:ticket).permit(:issue_type, :comment)
   end
 end
