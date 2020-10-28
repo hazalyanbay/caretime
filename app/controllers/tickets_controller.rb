@@ -2,7 +2,7 @@ class TicketsController < ApplicationController
 
   before_action :set_ticket, only: [:show, :update]
   def index
-    @tickets = Ticket.where(status: 'pending')
+    @tickets = Ticket.all
   end
 
   def show; end

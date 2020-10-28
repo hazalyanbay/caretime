@@ -12,6 +12,7 @@
         <td style='padding-right:40px;'><%= ticket.issue_type %></td>
         <td style='padding-right:40px;'><%= ticket.status %></td>
         <td style='padding-right:40px;'><%= ticket.comment %></td>
+        <td><%= link_to 'See the details', ticket_path(ticket) %></td>
       </tr>
     <% end  %>
     </tbody>
