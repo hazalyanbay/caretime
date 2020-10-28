@@ -1,3 +1,20 @@
+<% if @ticket.issue_type == "I'm in danger, I need help!" %>
+    <div>
+      <p>Police is on the way!<br>
+      Please stay in contact with one of our agents<br>
+      </p>
+    </div>    
+<% elsif @ticket.issue_type == "I want to use hidden live chat" %>
+  <div>
+    <p>Please use link below to be redirected to our channel</p>
+    <p>You will be redirected to a page with video about 'something'<br> 
+    One of our workers will be chatting with you you can hide/show chat using 'hide' button</p>
+    <a href="#">Start hidden chat</a>
+  </div>
+<% else  %>
+  <p>Please use FaceTime link</p>
+  <a href="whatsapp://tel:15714516322">Start video chat using Whatsapp</a>
+<% end %>
 <h1>#<%= @chatroom.name %></h1>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>

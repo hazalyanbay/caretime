@@ -15,7 +15,8 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new(ticket_params)
     @ticket.victim = current_user
     if @ticket.save
-      redirect_to ticket_path(@ticket)
+      @chatroom = Chatroom.create(name: "Chatroom for ticket - #{@ticket.id}", ticket: @ticket)
+      redirect_to chatroom_path(@chatroom)
     else
       render :new
     end
