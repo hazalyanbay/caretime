@@ -1,15 +1,27 @@
-<span><%= @ticket.issue_type %></span>
-<span><%= @ticket.status %></span>
-<span><%= @ticket.comment %></span>
+<h2>Issue Type</h2>
+<h3 style='color:red'><strong><%= @ticket.issue_type %></strong></h3>
 
 <div>
-  <%= simple_form_for(@ticket) do |f| %>
-    <%= f.label :issue_type %>
-    <%= f.text_field :issue_type %>
-    <%= f.label :status %>
-    <%= f.text_field :status %>
-    <%= f.label :comment %>
-    <%= f.text_field :comment %>
-    <%= f.submit %>
-  <% end %>
+  <table>
+    <tbody>
+      <tr>
+        <th style='padding-right:40px;'>Name</th>
+        <th style='padding-right:40px;'>Phone Number</th>
+        <th style='padding-right:40px;'>Address</th>
+        <th style='padding-right:40px;'>Email</th>
+      </tr>
+      <tr>
+        <td style='padding-right:40px;'><%= User.find(@ticket.victim_id).first_name%></td>
+        <td style='padding-right:40px;'><%= User.find(@ticket.victim_id).phone_number %></td>
+        <td style='padding-right:40px;'><%= User.find(@ticket.victim_id).address %></td>
+        <td style='padding-right:40px;'><%= User.find(@ticket.victim_id).email %></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
+<div>
+  <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;'><%= link_to 'edit', edit_ticket_path %></button>
+</div>
+
+

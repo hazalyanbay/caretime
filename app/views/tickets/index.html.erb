@@ -1,10 +1,19 @@
 <h1>Tickets</h1>
 <div>
-  <ol>
-    <%= @tickets.each do |ticket| %>
-      <li><%= tickets[0].issue_type %></li>
-      <li><%= tickets[0].status %></li>
-      <li><%= tickets[0].comment %></li>
+  <table>
+    <tbody>
+      <tr>
+        <th>Issue Type</th>
+        <th>Status</th>
+        <th>Comment</th>
+      </tr>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td style='padding-right:40px;'><%= ticket.issue_type %></td>
+        <td style='padding-right:40px;'><%= ticket.status %></td>
+        <td style='padding-right:40px;'><%= ticket.comment %></td>
+      </tr>
     <% end  %>
-  </ol>
+    </tbody>
+  </table>
 </div>

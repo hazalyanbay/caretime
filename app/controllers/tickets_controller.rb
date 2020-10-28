@@ -2,7 +2,7 @@ class TicketsController < ApplicationController
 
   before_action :set_ticket, only: [:show, :update]
   def index
-    @tickets = Ticket.all
+    @tickets = Ticket.where(status: 'pending')
   end
 
   def show; end
@@ -28,11 +28,10 @@ class TicketsController < ApplicationController
   def update
     @ticket = Ticket.find(params[:id])
     @ticket.update(ticket_params)
-    redirect_to dashboard_path
+    redirect_to tickets_path
   end
 
   private
-
 
   def set_ticket
     @ticket = Ticket.find(params[:id])
