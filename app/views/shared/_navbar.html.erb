@@ -16,7 +16,7 @@
         </li>
         <% if current_user.worker? %>
         <li class="nav-item">
-          <%= link_to "Worker sign in", "#", class: "nav-link" %>
+          <%= link_to "Tickets", tickets_path, class: "nav-link" %>
         </li>
         <% end  %>
         <li class="nav-item dropdown">
