@@ -1,4 +1,7 @@
 class ContactsController < ApplicationController
+  before_action :contact_id, only: [:show, :edit, :update]
+  def show; end
+
   def new
     @contact = Contact.new
   end
@@ -17,18 +20,19 @@ class ContactsController < ApplicationController
     end
   end
 
-  def edit
-    @contact = Contact.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @contact = Contact.find(params[:id])
     @contact.user = current_user
     redirect_to root_path
     # can be changed after all the routes are settled
   end
 
   private
+
+  def contact_id
+    @contact = Contact.find(params[:id])
+  end
 
   def contact_params
     params.require(:contact).permit(:full_name, :phone_number)
