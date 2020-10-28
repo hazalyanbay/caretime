@@ -2,9 +2,9 @@
 <div>
   <ol>
     <%= @tickets.each do |ticket| %>
-      <li><%= tickets[0].issue_type %></li>
-      <li><%= tickets[0].status %></li>
-      <li><%= tickets[0].comment %></li>
+      <li><%= ticket[0].issue_type %></li>
+      <li><%= ticket[0].status %></li>
+      <li><%= ticket[0].comment %></li>
     <% end  %>
   </ol>
 </div>
