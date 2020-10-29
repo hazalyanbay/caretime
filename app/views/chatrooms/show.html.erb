@@ -11,6 +11,40 @@
 
 
     <div>
+
+      <p>Police is on the way!<br>
+      Please stay in contact with one of our agents<br>
+      </p>
+    </div>    
+<% elsif @ticket.issue_type == "I want to use hidden live chat" %>
+  <div>
+    <p>Please use link below to be redirected to our channel</p>
+    <p>You will be redirected to a page with video about 'something'<br> 
+    One of our workers will be chatting with you you can hide/show chat using 'hide' button</p>
+    <a href="#">Start hidden chat</a>
+  </div>
+<% else  %>
+  <%# !!!!!!Video chat!!!!!! %>
+
+    <div id="videos"
+          data-controller="vonage"
+          data-vonage-api-key="<%= ENV["VONAGE_API_KEY"]  %>"
+          data-vonage-session-id="<%= @chatroom.vonage_session_id  %>"
+          data-vonage-token="<%= @token %>"
+          data-vonage-name="<%= current_user.first_name  %>">
+    </div>
+
+<% end %>
+<h1>#<%= @chatroom.name %></h1>
+<div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+  <% @chatroom.messages.each do |message| %>
+    <div class="message-container" id="message-<%= message.id %>">
+      <i class="author">
+        <span><%= message.user.email %></span>
+        <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+      </i>
+      <p><%= message.content %></p>
+
       <p>Please use link below to be redirected to our channel</p>
       <p>You will be redirected to a page with video about 'something'<br>
       One of our workers will be chatting with you you can hide/show chat using 'hide' button</p>
