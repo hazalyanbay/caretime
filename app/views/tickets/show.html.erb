@@ -21,6 +21,21 @@
 </div>
 
 <div>
+  <table>
+    <tbody>
+      <tr>
+        <th style='padding-right:40px;'>Full Name</th>
+        <th style='padding-right:40px;'>Phone Number</th>
+      </tr>
+      <tr>
+        <td style='padding-right:40px;'><%= Contact.find(User.find(@ticket.victim_id).id).full_name %></td>
+        <td style='padding-right:40px;'><%= Contact.find(User.find(@ticket.victim_id).id).phone_number%></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
   <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;'><%= link_to 'edit', edit_ticket_path %></button>
 </div>
 
