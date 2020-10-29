@@ -11,10 +11,10 @@
         <th style='padding-right:40px;'>Email</th>
       </tr>
       <tr>
-        <td style='padding-right:40px;'><%= User.find(@ticket.victim_id).first_name%></td>
-        <td style='padding-right:40px;'><%= User.find(@ticket.victim_id).phone_number %></td>
-        <td style='padding-right:40px;'><%= User.find(@ticket.victim_id).address %></td>
-        <td style='padding-right:40px;'><%= User.find(@ticket.victim_id).email %></td>
+        <td style='padding-right:40px;'><%= @ticket.victim.first_name%></td>
+        <td style='padding-right:40px;'><%= @ticket.victim.phone_number %></td>
+        <td style='padding-right:40px;'><%= @ticket.victim.address %></td>
+        <td style='padding-right:40px;'><%= @ticket.victim.email %></td>
       </tr>
     </tbody>
   </table>
@@ -28,15 +28,16 @@
         <th style='padding-right:40px;'>Phone Number</th>
       </tr>
       <tr>
-        <td style='padding-right:40px;'><%= Contact.find(User.find(@ticket.victim_id).id).full_name %></td>
-        <td style='padding-right:40px;'><%= Contact.find(User.find(@ticket.victim_id).id).phone_number%></td>
+        <td style='padding-right:40px;'><%= @ticket.victim.contact.full_name %></td>
+        <td style='padding-right:40px;'><%= @ticket.victim.contact.phone_number%></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <div>
-  <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;'><%= link_to 'edit', edit_ticket_path %></button>
+  <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;margin-right: 30px;  '><%= link_to 'edit', edit_ticket_path %></button>
+  <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;'><%= link_to 'Go to chatroom!', chatroom_path %></button>
 </div>
 
 
