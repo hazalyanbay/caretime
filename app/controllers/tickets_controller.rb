@@ -32,6 +32,14 @@ class TicketsController < ApplicationController
     redirect_to tickets_path
   end
 
+  def contact_ticket
+    our_user = User.find(@ticket.victim_id)
+    if our_user.worker == true
+      @contact_id = our_user.id
+      @contact_id
+    end
+  end
+
   private
 
   def set_ticket
