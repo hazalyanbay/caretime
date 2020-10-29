@@ -38,6 +38,7 @@
   <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
     <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
     <%= f.submit "Send" %>
+    <%= link_to "Home", root_path, class: "btn btn-primary" %>
   <% end %>
 </div>
 
