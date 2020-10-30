@@ -1,9 +1,11 @@
 #videos {
-  display: grid;
+  display: flexbox;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  width: 400px;
 }
 
 .OT_root {
   height: 240px !important;
+  
 }
