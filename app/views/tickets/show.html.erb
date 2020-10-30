@@ -38,7 +38,7 @@
 
 <div>
   <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;margin-right: 30px;  '><%= link_to 'edit', edit_ticket_path %></button>
-  <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;'><%= link_to 'Go to chatroom!', chatroom_path %></button>
+  <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;'><%= link_to 'Go to chatroom!', chatroom_path(@ticket.chatroom) %></button>
 </div>
 
 
