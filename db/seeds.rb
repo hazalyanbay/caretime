@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #  create 5 workers/victims
 #  create solved tickets for the 5 victims (comments ec)
+Chatroom.destroy_all
 Ticket.destroy_all
 User.destroy_all
 workerone = User.create!(worker: true, first_name: 'hazal', last_name: 'yanbay', phone_number: '5053678898', address: 'beyoglu', email: 'buse.xezal@gmail.com', password: '555555')
@@ -28,7 +29,10 @@ ticketone = Ticket.create!(issue_type: "I'm in danger, I need help!", status: 's
 tickettwo = Ticket.create!(issue_type: "I want to use hidden live chat", status: 'solved', comment: "we found her a place to stay for tonight", worker: workertwo, victim: victimtwo)
 ticketthree = Ticket.create!(issue_type: "I want to speak to specialist via video chat", status: 'solved', comment: "we talked with her, she decided to move another house", worker: workerthree, victim: victimthree)
 
-contactone = Contact.create(full_name: 'Ahmet Can', phone_number: '5556667788',user_id:1)
-contactone = Contact.create(full_name: 'Ahmet Han', phone_number: '5556667789',user_id:2)
-contactone = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user_id:3)
+contactone = Contact.create(full_name: 'Ahmet Can', phone_number: '5556667788',user: victimone)
+contactone = Contact.create(full_name: 'Ahmet Han', phone_number: '5556667789',user:victimtwo)
+contactone = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimthree)
+contactone = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimfour)
+contactone = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimfive)
+contactone = Contact.create(full_name: 'Ahmet Can', phone_number: '5556667788',user: workerone)
 

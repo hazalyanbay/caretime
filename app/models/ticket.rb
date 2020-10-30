@@ -1,7 +1,7 @@
 class Ticket < ApplicationRecord
   belongs_to :victim, class_name: 'User'
   belongs_to :worker, class_name: 'User', optional: true
-  has_one :chatroom
+  has_one :chatroom, dependent: :destroy
 
   enum status: [:pending, :solved]
   def self.styles
