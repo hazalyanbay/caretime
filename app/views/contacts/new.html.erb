@@ -1,6 +1,6 @@
-<h1>Please, add contacts information of your trusted person</h1>
+<h1 id='new_contact_title'>Please, add contacts information of your trusted person</h1>
 
-<div>
+<div id='new_contact_form'>
   <%= simple_form_for [@user, @contact] do |f|%>
     <%= f.input :full_name %>
     <%= f.input :phone_number %>
