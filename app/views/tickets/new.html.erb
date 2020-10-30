@@ -3,17 +3,15 @@
     <%= simple_form_for(@ticket) do |f| %>
       <%= f.input :issue_type, as: :hidden, input_html: {value: style} %>
       <% if style == "I'm in danger, I need help!" %>
-        <%= f.submit style, data: { confirm: 'Are you sure?' }, class: "btn btn-primary w-100" %>
+        <%= f.submit style, data: { confirm: 'We will call police to the address that you provided. Please confirm.' }, class: "btn btn-success w-300" %>
       <% elsif style == "I want to use hidden live chat" %>
-        <%= f.submit style, data: { confirm: 'You will be redirected to a page with educational video about plants. One of our agents will be in contact with through a live chat. You can hide/show chat using hide button' }, class: "btn btn-primary w-100" %>
-        <p>You will be redirected to a page with educational video about plants<br> 
-        One of our agents will be in contact with through a live chat.<br>You can hide/show chat using <i class="far fa-eye-slash"></i> button</p>
+        <%= f.submit style, data: { confirm: 'You will be redirected to a page with educational video about plants. One of our agents will be in contact with through a live chat. You can hide/show chat using hide button' }, class: "btn btn-success w-300" %>
       <% else %>
-        <%= f.submit style, class: "btn btn-primary w-100" %>
+        <%= f.submit style, class: "btn btn-success w-300" %>
       <% end %>
     <% end %>
   <% end %>
 
-  <%= link_to "Read about domestic violence", information_path, class: "btn btn-primary w-100 mt-3" %>
-  <%= link_to "Back", root_path, class: "btn btn-primary mt-3" %>
+  <%= link_to "Read about domestic violence", information_path, class: "btn btn-success w-300 mt-3" %>
+  <%= link_to "Back", root_path, class: "btn btn-success mt-3" %>
 </div>
