@@ -5,5 +5,5 @@ class Chatroom < ApplicationRecord
     self.vonage_session_id = session.session_id
   end
   belongs_to :ticket
-  has_many :messages
+  has_many :messages, dependent: :destroy
 end
