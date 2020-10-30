@@ -1,13 +1,40 @@
-<header>
-  <div class="overlay">
-<h1>CareTime</h1>
-<h3>Healthy Home Plants</h3>
-<p>Best place for happy healty plants</p>
-  <br>
-  <button>READ MORE</button>
+
+<div id="content">
+  <div class="container">
+    <div class="flipper">
+      <div class="front">
+        <img src="https://images.unsplash.com/photo-1527195694714-9b939fac3432?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        <p class="caption">Cherry blossom</p>
+      </div>
+      <div class="back">
+        <p>A cherry blossom is the flower of any of several trees of genus Prunus, particularly the Japanese cherry, Prunus serrulata, which is called sakura after the Japanese (桜 or 櫻; さくら).</p>
+      </div>
     </div>
-</header>
+  </div>
 
+  <div class="container">
+    <div class="flipper">
+      <div class="front">
+        <img src="https://images.unsplash.com/photo-1510520745063-ceaa7314a820?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="white daisy">
+        <p class="caption">Tulip</p>
+      </div>
+      <div class="back">
+        <p>Tulips (Tulipa) form a genus of spring-blooming perennial herbaceous bulbiferous geophytes. The flowers are usually large, showy and brightly coloured, generally red, yellow, or white.</p>
+      </div>
+    </div>
+  </div>
 
-  <%= link_to "Options", new_ticket_path, class: "btn btn-success" %>
+  <div class="container">
+    <div class="flipper">
+      <div class="front">
+        <img src="https://images.unsplash.com/photo-1440376202796-51e9741f9468?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Red Purple and Yellow Tulip">
+        <p class="caption">Lavender</p>
+      </div>
+      <div class="back">
+        <p>Lavandula is a genus of 47 known species of flowering plants in the mint family. The most widely cultivated species is often referred to as lavender, and there is a color named for the shade of its the flowers. </p>
+      </div>
+    </div>
+  </div>
+</div>
+  <%= link_to "Questions", new_ticket_path, class: "btn btn-success" %>
 
