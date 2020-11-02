@@ -1,9 +1,9 @@
-<div>
+<div class="container-fluid">
   <div id="video_window">
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
-<a class="js-hidebtn" href="#"><i class="far fa-eye-slash"></i></a>
- <div class="js-hiddenchat">
+  <a class="js-hidebtn sticky-top" z-index: 5 href="#"><i class="far fa-eye-slash"></i></a>
+  <div class="js-hiddenchat">
   <% if @ticket.issue_type == "I'm in danger, I need help!" %>
       <div>
         <p>Police is on the way!<br>
@@ -11,9 +11,7 @@
         </p>
       </div>
   <% elsif @ticket.issue_type == "I want to use hidden live chat" %>
-    <%# <div>
-      <a href="#">Start hidden chat</a>
-    </div> %>
+    <%# <div class="js-hiddenchat"> %>
   <% else  %>
     <%# !!!!!!Video chat!!!!!! %>
     <div id="videos"
@@ -45,7 +43,7 @@
       <%= f.submit "Send" %>
     <% end %>
   </div>
-  
+
   <%= link_to "Home", root_path, class: "btn btn-primary mb-5" %>
 </div>
 

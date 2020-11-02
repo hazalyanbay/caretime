@@ -2,10 +2,30 @@
   display: flexbox;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  width: 400px;
+  height: 50vh;
+  background: url("https://ttwo.dk/wp-content/uploads/2017/08/person-placeholder.jpg");
+  background-size: cover;
+  // width: 400px;
 }
 
 .OT_root {
-  height: 240px !important;
+  height: 50vh !important;
+  position: relative;
+
   
+}
+
+.OT_publisher {
+    height: 25% !important;
+    width: 25% !important;
+    bottom: -75%;
+    z-index: 100;
+    position: absolute;
+}
+
+.OT_subscriber {
+  bottom:  100px;
+}
+iframe {
+  width: 100%;
 }
