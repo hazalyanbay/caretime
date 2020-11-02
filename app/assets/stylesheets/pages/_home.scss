@@ -2,9 +2,11 @@
 
 
 *{padding: 0; margin: 0; box-sizing: border-box;}
-body{height: 900px;}
+body{height: 900px;
+  background-image: url('https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+}
 header {
-  background: url('https://i.hizliresim.com/B6Q58P.png');
+  background: url('https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
   text-align: center;
   width: 100%;
   height: auto;
@@ -21,8 +23,8 @@ header .overlay{
   color: #FFF;
   text-shadow: 1px 1px 1px #333;
   background-image: linear-gradient(135deg, #226705c7 10%, #20fd451a 100%);
-
 }
+
 
 h1 {
   font-family: 'Dancing Script', cursive;
@@ -74,21 +76,16 @@ img {
 }
 
 a {
-  color: black;
+  color: #a0bb98;
 }
 
-.caption,
-h1,
-.date {
-  margin: 0;
-  text-align: center;
-}
 
 .caption,
 h1 {
   font-family: "Reenie Beanie", sans-serif;
   font-size: 2em;
   padding: 10px 10px 0 10px;
+  color: #a5d59d;
 }
 
 .date {
@@ -132,7 +129,7 @@ h1 {
   left: 0;
   width: 250px;
   height: 250px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(42, 136, 9, 0.69);
 }
 
 .front {

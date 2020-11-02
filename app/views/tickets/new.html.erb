@@ -3,11 +3,11 @@
     <%= simple_form_for(@ticket) do |f| %>
       <%= f.input :issue_type, as: :hidden, input_html: {value: style} %>
       <% if style == "I'm in danger, I need help!" %>
-        <%= f.submit style, data: { confirm: 'We will call police to the address that you provided. Please confirm.' }, class: "btn btn-success w-300" %>
+        <%= f.submit style, class: "js-police btn btn-success w-300" %>
       <% elsif style == "I want to use hidden live chat" %>
-        <%= f.submit style, data: { confirm: 'You will be redirected to a page with educational video about plants. One of our agents will be in contact with through a live chat. You can hide/show chat using hide button' }, class: "btn btn-success w-300" %>
+        <%= f.submit style, class: "js-chat btn btn-success w-300" %>
       <% else %>
-        <%= f.submit style, class: "btn btn-success w-300" %>
+        <%= f.submit style, class: "js-video btn btn-success w-300" %>
       <% end %>
     <% end %>
   <% end %>
