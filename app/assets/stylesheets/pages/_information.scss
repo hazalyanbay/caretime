@@ -1,1 +1,55 @@
 
+.c-posts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  padding: 5%;
+
+  &__item {
+    flex-grow: 1;
+    padding-bottom: 2em;
+
+    &:first-child {
+      flex-grow: 2;
+    }
+  }
+}
+
+@media all and (min-width:600px) {
+  .c-posts {
+    &__item {
+      flex-basis: 50%;
+      padding-right: 5%;
+
+      &:first-child {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@media all and (min-width:1000px) {
+  .c-posts {
+    &__item {
+      flex-basis: 33%;
+
+      &:first-child {
+        flex-basis: 66%;
+      }
+    }
+  }
+}
+
+@media all and (min-width:1400px) {
+  .c-posts {
+    &__item {
+      flex-basis: 25%;
+
+      &:first-child {
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+
+/* Other Non-Flexbox Related Styles */
