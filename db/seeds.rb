@@ -32,9 +32,9 @@ chatroomtwo = Chatroom.create!(name: "Chatroom for ticket #{tickettwo.id}", tick
 chatroomthree = Chatroom.create!(name: "Chatroom for ticket #{ticketthree.id}", ticket: ticketthree)
 
 contactone = Contact.create(full_name: 'Ahmet Can', phone_number: '5556667788',user: victimone)
-contactone = Contact.create(full_name: 'Ahmet Han', phone_number: '5556667789',user:victimtwo)
-contactone = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimthree)
-contactone = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimfour)
-contactone = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimfive)
-contactone = Contact.create(full_name: 'Ahmet Can', phone_number: '5556667788',user: workerone)
+contacttwo = Contact.create(full_name: 'Ahmet Han', phone_number: '5556667789',user:victimtwo)
+contactthree = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimthree)
+contactfour = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimfour)
+contactfive = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimfive)
+contactsix = Contact.create(full_name: 'Ahmet Can', phone_number: '5556667788',user: workerone)
 

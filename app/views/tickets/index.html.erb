@@ -1,21 +1,24 @@
-<h1>Tickets</h1>
-<div>
+<h1 id='heading_contact'>Tickets</h1>
+<div class='table_whole'>
   <table>
     <tbody>
       <tr>
         <th>Issue Type</th>
         <th>Status</th>
         <th>Comment</th>
+        <th>Details Link</th>
       </tr>
     <% @tickets.each do |ticket| %>
       <tr>
-        <td style='padding-right:40px;'><%= ticket.issue_type %></td>
-        <td style='padding-right:40px;'><%= ticket.status %></td>
-        <td style='padding-right:40px;'><%= ticket.comment %></td>
-        <td><%= link_to 'See the details', ticket_path(ticket) %></td>
+        <td><%= ticket.issue_type %></td>
+        <td><%= ticket.status %></td>
+        <td><%= ticket.comment %></td>
+        <td><em><strong><%= link_to 'See the details', ticket_path(ticket) %></em></strong></td>
       </tr>
     <% end  %>
     </tbody>
   </table>
-  <%= link_to "Back to tickets", tickets_path, class: "btn btn-primary" %>
+  <div>
+    <%= link_to "Back to top", tickets_path, class: "btn btn-primary", id: "back_to"%>
+  </div>
 </div>

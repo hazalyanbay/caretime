@@ -25,15 +25,18 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import "controllers"
+import "controllers";
+
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { initHideBtn } from '../components/init_hide_btn';
+import { initSweetAlert } from '../components/init_sweet_alert';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initChatroomCable();
   initHideBtn();
+  initSweetAlert();
 });
 
 
