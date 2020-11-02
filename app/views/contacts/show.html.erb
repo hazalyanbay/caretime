@@ -1,13 +1,19 @@
-<h1 style='text-shadow:2px 2px 2px #76b993; text-align: center; color:white;'>Secondary Contact  Info</h1>
-<table class='table_whole' style='border:2px solid #D3D3D3'>
-  <tbody>
-    <tr>
-      <th style='padding-right:40px;'>Full Name</th>
-      <th style='padding-right:40px;'>Phone Number</th>
-    </tr>
-    <tr>
-      <td style='padding-right:40px;'><%= @contact.full_name %></td>
-      <td style='padding-right:40px;'><%= @contact.phone_number %></td>
-    </tr>
-  </tbody>
-</table>
+<h1 id='heading_contact'>Secondary Contact  Info</h1>
+
+<div style='margin-left:40px'>
+  <table class='table_whole' style='border:2px solid #D3D3D3'>
+    <tbody>
+      <tr>
+        <th>Full Name</th>
+        <th>Phone Number</th>
+      </tr>
+      <tr>
+        <td><%= @contact.full_name %></td>
+        <td><%= @contact.phone_number %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style='margin-top: 40px; '>
+  <button type="button" class="btn btn-link" style="margin-left:110px;" id='go_to_btn'><%= link_to 'Edit contact', edit_contact_path, id:"go_to_btn" %></button>
+</div>
