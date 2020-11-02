@@ -1,44 +1,55 @@
 
-<h2>Issue Type</h2>
-<h3 style='color:red'><strong><%= @ticket.issue_type %></strong></h3>
+<h1 id='heading_contact'>Issue Type</h1>
+<h3 style='color:#A52A2A; text-align:center;'><strong><%= @ticket.issue_type %></strong></h3>
 
-<div>
-  <table>
-    <tbody>
-      <tr>
-        <th style='padding-right:40px;'>Name</th>
-        <th style='padding-right:40px;'>Phone Number</th>
-        <th style='padding-right:40px;'>Address</th>
-        <th style='padding-right:40px;'>Email</th>
-      </tr>
-      <tr>
-        <td style='padding-right:40px;'><%= @ticket.victim.first_name%></td>
-        <td style='padding-right:40px;'><%= @ticket.victim.phone_number %></td>
-        <td style='padding-right:40px;'><%= @ticket.victim.address %></td>
-        <td style='padding-right:40px;'><%= @ticket.victim.email %></td>
-      </tr>
-    </tbody>
-  </table>
+ <div class='victim_info'>
+  <div class='table_whole'>
+    <table>
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Email</th>
+        </tr>
+        <tr>
+          <td><%= @ticket.victim.first_name%></td>
+          <td><%= @ticket.victim.phone_number %></td>
+          <td><%= @ticket.victim.address %></td>
+          <td><%= @ticket.victim.email %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
-<div>
-  <table>
-    <tbody>
-      <tr>
-        <th style='padding-right:40px;'>Contact Name</th>
-        <th style='padding-right:40px;'>Contact Number</th>
-      </tr>
-      <tr>
-        <td style='padding-right:40px;'><%= @ticket.victim.contact.full_name %></td>
-        <td style='padding-right:40px;'><%= @ticket.victim.contact.phone_number%></td>
-      </tr>
-    </tbody>
-  </table>
+<div class='victim_info'>
+  <div class='table_whole'>
+    <table>
+      <tbody>
+        <tr>
+          <th>Contact Name</th>
+          <th>Contact Number</th>
+        </tr>
+        <tr>
+          <td><%= @ticket.victim.contact.full_name %></td>
+          <td><%= @ticket.victim.contact.phone_number%></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
-<div>
-  <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;margin-right: 30px;  '><%= link_to 'edit', edit_ticket_path %></button>
-  <button type="button" class="btn btn-link" style='border:1px solid #00FFFF; border-radius:25%;'><%= link_to 'Go to chatroom!', chatroom_path(@ticket.chatroom) %></button>
+<div class='d-flex justify-content-between'>
+  <div>
+    <button type="button" id='go_to_btn'><%= link_to 'Edit Ticket', edit_ticket_path, id:"go_to_btn"%></button>
+  </div>
+  <div>
+    <button type="button" id='go_to_btn'><%= link_to 'Go to chatroom!', chatroom_path(@ticket.chatroom), id:"go_to_btn"%></button>
+  </div>
+  <div>
+    <button type="button" id='go_to_btn'><%= link_to 'Go to all tickets!', tickets_path,id:"go_to_btn"%></button>
+  </div>
 </div>
 
 

@@ -1,7 +1,10 @@
-<h1>Ticket</h1>
+<h1 id='heading_contact'>Ticket</h1>
 <%= simple_form_for(@ticket) do |f| %>
   <%= f.input :status, collection: Ticket.statuses.keys %>
   <%= f.input :comment %>
   <%= f.submit  %>
 <% end %>
-<%= link_to "Back", tickets_path, class: "btn btn-primary" %>
+<div>
+  <%= link_to "Back", tickets_path, class: "btn btn-primary", id: "back_to"%>
+</div>
+
