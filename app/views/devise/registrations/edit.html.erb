@@ -1,4 +1,4 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2 id='heading_contact'>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -31,13 +31,20 @@
                 input_html: { autocomplete: "current-password" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+  <div class="form-actions" style='margin-left: 140px;'>
+    <%= f.button :submit, "Update", id:'go_to_btn' %>
   </div>
 <% end %>
+<div>
+  <h3 id='heading_other'>Cancel my account</h3>
+  <div>
+    <div style='margin-left: 90px;'>
+      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, id:"go_to_btn"%></p>
+    </div>
+    <div style='margin-left: 20px; margin-bottom: 20px;'>
+      <%= link_to "Back to Home", :back, id:"back_to" %>
+    </div>
+  </div>
+</div>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
