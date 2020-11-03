@@ -34,7 +34,7 @@ import { initSweetAlert } from '../components/init_sweet_alert';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initChatroomCable();
+  initChatroomCable();
   initHideBtn();
   initSweetAlert();
 });

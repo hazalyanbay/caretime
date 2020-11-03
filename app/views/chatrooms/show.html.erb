@@ -24,26 +24,28 @@
   <% end %>
   
   <h5>Chat</h5>
-  <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
-    <% @chatroom.messages.each do |message| %>
-      <div class="message-container" id="message-<%= message.id %>">
-        <i class="author">
-          <span><%= message.user.email %></span>
-          <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-        </i>
-        <p><%= message.content %></p>
-      </div>
-    <% end %>
-  </div>
+  <div data-controller="chatbox">
+    <div id="messages" data-chatroom-id="<%= @chatroom.id %>" data-target='chatbox.messages'>
+      <% @chatroom.messages.each do |message| %>
+        <div class="message-container" id="message-<%= message.id %>">
+          <i class="author">
+            <span><%= message.user.email %></span>
+            <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+          </i>
+          <p><%= message.content %></p>
+        </div>
+      <% end %>
+    </div>
 
-  <%# WE NEED TO FIX THIS CHAT. IT SKIPS AUTHENTICATION TOKEN IN MESSAGES CONTROLLER! %>
-  <div class="mb-5">
-    <%= simple_form_for([ @chatroom, @message ], remote: true) do |f| %>
-      <%= f.input :content, label: false, placeholder: "Write your message" %>
-      <%= f.submit "Send" %>
-    <% end %>
-  </div>
 
+    <%# WE NEED TO FIX THIS CHAT. IT SKIPS AUTHENTICATION TOKEN IN MESSAGES CONTROLLER! %>
+    <div class="mb-5">
+      <%= simple_form_for([ @chatroom, @message ], remote: true, html: { data: { turbolinks: "false" } }) do |f| %>
+        <%= f.input :content, input_html: { data: { target: "chatbox.input" } }, label: false, placeholder: "Write your message" %>
+        <%= f.submit "Send" %>
+      <% end %>
+    </div>
+  </div>
   <%= link_to "Home", root_path, class: "btn btn-primary mb-5" %>
 </div>
 
