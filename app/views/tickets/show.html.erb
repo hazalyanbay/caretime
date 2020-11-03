@@ -42,13 +42,13 @@
 
 <div class='d-flex justify-content-between'>
   <div>
-    <button type="button" id='go_to_btn'><%= link_to 'Edit Ticket', edit_ticket_path, id:"go_to_btn"%></button>
+    <button type="button" id='go_to_btn'><%= link_to 'Edit ticket', edit_ticket_path, id:"go_to_btn"%></button>
   </div>
   <div>
-    <button type="button" id='go_to_btn'><%= link_to 'Go to chatroom!', chatroom_path(@ticket.chatroom), id:"go_to_btn"%></button>
+    <button type="button" id='go_to_btn'><%= link_to 'Go to chatroom', chatroom_path(@ticket.chatroom), id:"go_to_btn"%></button>
   </div>
   <div>
-    <button type="button" id='go_to_btn'><%= link_to 'Go to all tickets!', tickets_path,id:"go_to_btn"%></button>
+    <button type="button" id='go_to_btn'><%= link_to 'Go to all tickets', tickets_path,id:"go_to_btn"%></button>
   </div>
 </div>
 
