@@ -2,7 +2,7 @@
 <%= simple_form_for(@ticket) do |f| %>
   <%= f.input :status, collection: Ticket.statuses.keys %>
   <%= f.input :comment %>
-  <%= f.submit class: "btn btn-primary" %>
+  <%= f.submit class: "btn btn-primary", id:'go_to_btn' %>
 <% end %>
 
 <div>

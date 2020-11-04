@@ -10,6 +10,7 @@
 Chatroom.destroy_all
 Ticket.destroy_all
 User.destroy_all
+Contact.destroy_all
 
 workerone = User.create!(worker: true, first_name: 'hazal', last_name: 'yanbay', phone_number: '5053678898', address: 'beyoglu', email: 'buse.xezal@gmail.com', password: '555555')
 workertwo = User.create!(worker: true, first_name: 'semyon', last_name: 'kazanstev', phone_number: '464673382', address: 'beyoglu', email: 'semyon@gmail.com', password: '555555')
