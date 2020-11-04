@@ -1,0 +1,29 @@
+.message-content {
+max-width: 80%;
+margin-left: 10px;
+background: #1e3e2f;
+padding: 10px;
+text-align: center;
+font-weight: 400;
+color: #fff;
+font-family: arial;
+position: relative;
+border-radius: 5px;
+word-wrap: break-word;
+}
+
+.message-content:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #1e3e2f;
+  border-top: 10px solid #1e3e2f;
+  border-bottom: 10px solid transparent;
+  left: -19px;
+  top: 6px;
+}
+.avatar-container {
+  margin-right: 10px;
+}

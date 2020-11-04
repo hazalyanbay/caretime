@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div id="video_window">
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLo12_MvY3Yr1h7IEquOJb1n_X3h7m0LSc" height="300" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
-  <a class="js-hidebtn sticky-top" z-index: 5 href="#"><i class="far fa-eye-slash"></i></a>
+  
   <div class="js-hiddenchat">
   <% if @ticket.issue_type == "I'm in danger, I need help!" %>
       <div>
@@ -27,13 +27,7 @@
   <div data-controller="chatbox">
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>" data-target='chatbox.messages'>
       <% @chatroom.messages.each do |message| %>
-        <div class="message-container" id="message-<%= message.id %>">
-          <i class="author">
-            <span><%= message.user.email %></span>
-            <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-          </i>
-          <p><%= message.content %></p>
-        </div>
+        <%= render "messages/message", message: message %>
       <% end %>
     </div>
 
@@ -42,7 +36,7 @@
     <div class="mb-5">
       <%= simple_form_for([ @chatroom, @message ], remote: true, html: { data: { turbolinks: "false" } }) do |f| %>
         <%= f.input :content, input_html: { data: { target: "chatbox.input" } }, label: false, placeholder: "Write your message" %>
-        <%= f.submit "Send" %>
+        <%= f.submit "Send", class: "btn btn-gradient" %>
       <% end %>
     </div>
   </div>
@@ -52,4 +46,6 @@
     <%= link_to "Home", root_path, class: "btn btn-primary", id:"chatroom_btn" %>
   </div>
 </div>
-
+<div class="fixed-bottom d-flex justify-content-end">
+  <a class="js-hidebtn" z-index: 5 href="#"><i class="far fa-eye-slash"></i></a>
+</div>
