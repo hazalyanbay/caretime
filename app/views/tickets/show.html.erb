@@ -13,9 +13,9 @@
           <th>Email</th>
         </tr>
         <tr>
-          <td><%= @ticket.victim.first_name%></td>
+          <td><%= @ticket.victim.first_name.capitalize%></td>
           <td><%= @ticket.victim.phone_number %></td>
-          <td><%= @ticket.victim.address %></td>
+          <td><%= @ticket.victim.address.capitalize %></td>
           <td><%= @ticket.victim.email %></td>
         </tr>
       </tbody>
