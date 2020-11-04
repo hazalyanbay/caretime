@@ -37,4 +37,22 @@ button:hover{
   color:#FFFAF0;
   width:120px;
   font-weight: bold;
+  text-align: center;
+}
+
+#chatroom_btn {
+  margin-top:15px;
+  margin-left:60px;
+  background-color: #aaefd0;
+  border:1px solid #aaefd0;
+  color:#FFFAF0;
+}
+
+#tickets_new_btn {
+  background-color: #aaefd0;
+  border:1px solid #aaefd0;
+  border-radius: 25%;
+  color:#FFFAF0;
+  width:350px;
+  word-wrap: none;
 }
