@@ -4,7 +4,6 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-  <h1>comment make sure we add in all the user fiels that we want</h1>
     <%= f.input :first_name,
                  required: true,
                  input_html: { autocomplete: "first name" } %>
@@ -28,11 +27,11 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :avatar, as: :file %>
+    <%= f.input :add_profile_photo, as: :file %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="form-actions mb-3">
+    <button type="button" id='go_to_btn'><%= f.button :submit, "Sign up" %></button>
   </div>
 <% end %>
 

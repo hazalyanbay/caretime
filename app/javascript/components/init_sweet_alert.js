@@ -8,11 +8,11 @@ const initSweetAlert = () => {
         e.preventDefault(); // <--- prevent form from submitting
         swal({
             title: "Are you sure?",
-            text: "Police will come to your address!",
+            text: "If you press 'Yes', police will be dispatched to your home address",
             icon: "warning",
             buttons: [
-              'No, cancel it!',
-              'Yes, I am sure!'
+              'No',
+              'Yes, I am sure'
             ],
             dangerMode: true,
           }).then(function(isConfirm) {
@@ -29,11 +29,11 @@ const initSweetAlert = () => {
         e.preventDefault(); // <--- prevent form from submitting
         swal({
             title: "",
-            text: "You are gonna talk with us on live chat. Remember, you can hide chat and watch video for undercover",
+            text: "You are about to speak with us on a live chat. Remember, you can hide chat at any moment and play the video to enter undercover mode",
             icon: "warning",
             buttons: [
-              'No, cancel it!',
-              'Okay!'
+              'No, cancel it',
+              'Okay'
             ],
             dangerMode: true,
           }).then(function(isConfirm) {
