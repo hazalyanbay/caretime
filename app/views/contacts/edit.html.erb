@@ -2,7 +2,7 @@
   <%= simple_form_for [@user, @contact] do |f| %>
     <%= f.input :full_name %>
     <%= f.input :phone_number %>
-    <%= f.submit %>
+    <%= f.submit "Save", class: "btn btn-gradient" %>
   <% end %>
   <div style='margin-top:60px;margin-left:150px;'>
     <%= link_to "Back", contact_path(@contact), class: "btn btn-primary", id:"go_to_btn"%>
