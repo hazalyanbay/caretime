@@ -58,3 +58,25 @@ button:hover{
   width:415px;
   height:45px;
 }
+
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: linear-gradient(#678367, #1e3e2f);
+  transition: background 0.3s ease;
+  border: 1px solid #678367;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#678367, #1e3e2f);
+  color: white;
+}
+
+.js-hidebtn {
+  // right: -200px;
+  // bottom: -5vh;
+  font-size: 40px;
+  // position: absolute;
+}
