@@ -36,7 +36,7 @@
     <div class="mb-hidebtn">
       <%= simple_form_for([ @chatroom, @message ], remote: true, html: { data: { turbolinks: "false" } }) do |f| %>
         <%= f.input :content, input_html: { data: { target: "chatbox.input" } }, label: false, placeholder: "Write your message" %>
-        <%= f.submit "Send", class: "btn btn-gradient btn-block" %>
+        <%= f.submit "Send", class: "btn btn-gradient" %>
       <% end %>
     </div>
   </div>
