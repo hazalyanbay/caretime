@@ -77,6 +77,19 @@ button:hover{
 .js-hidebtn {
   // right: -200px;
   // bottom: -5vh;
-  font-size: 40px;
+  font-size: 45px;
   // position: absolute;
+  margin-right: 10px;
+  color: #1e3e2f;
+}
+
+a {
+  text-decoration: none;
+}
+a:link, a:visited {
+  color:  #1e3e2f;
+}
+
+.mb-hidebtn {
+  margin-bottom: 100px;
 }
