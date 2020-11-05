@@ -1,19 +1,22 @@
+$app_color:#1e3e2f;
+
 .table_whole {
-  margin-left:8px;
+  margin-left:4px;
   margin-top:30px;
   margin-bottom:30px;
+  margin-right:4px;
   th {
     font-family:'Arial Black' ;
     font-size:13px;
     padding-top:12px;
     padding-bottom:12px;
     color:  white;
-    text-shadow:2px 2px 2px #aaefd0;
+    text-shadow:2px 2px 2px $app_color;
     text-align:center;
-    border:2px solid #aaefd0;
+    border:2px solid $app_color;
     width:80px;
     height:40px;
-    background-color: #aaefd0;
+    background-color: $app_color;
   }
 
   td {
@@ -23,7 +26,7 @@
     padding-right:12px;
     color: #484848;
     text-align:center;
-    border:2px solid #aaefd0;
+    border:2px solid $app_color;
     width:120px;
     height:40px;
   }
@@ -31,5 +34,8 @@
 
 .victim_info {
   margin-left:0px;
+  th {
+    width:200px;
+  }
 }
 

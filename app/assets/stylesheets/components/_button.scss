@@ -1,9 +1,11 @@
+$app_color:#1e3e2f;
+
 button {
   border: none;
   outline: none;
   padding: 10px 20px;
   border-radius: 50px;
-  color: #333;
+  color: #E6DED3;
   background: #fff;
   margin-bottom: 50px;
   box-shadow: 0 3px 20px 0 #0000003b;
@@ -16,25 +18,25 @@ button:hover{
 // after here its cards part
 
 .btn-success {
-  color: #fbfdff;
-  background-color: #aaefd0;
-  border-color: #aaefd0;
+  color: #E6DED3;
+  background-color: $app_color;
+  border-color: $app_color;
 }
 
 #back_to {
   margin-top:30px;
   margin-left:140px;
-  background-color: #aaefd0;
-  border:1px solid #aaefd0;
-  color:#FFFAF0;
+  background-color: $app_color;
+  border:1px solid $app_color;
+  color:#E6DED3;
 }
 
 #go_to_btn {
-  border:1px solid #aaefd0;
+  border:1px solid $app_color;
   border-radius:25%;
   margin-right:10px;
-  background-color: #aaefd0;
-  color:#FFFAF0;
+  background-color: $app_color;
+  color:#E6DED3;
   width:120px;
   font-weight: bold;
   text-align: center;
@@ -43,18 +45,18 @@ button:hover{
 #chatroom_btn {
   margin-top:15px;
   margin-left:60px;
-  background-color: #aaefd0;
-  border:1px solid #aaefd0;
-  color:#FFFAF0;
+  background-color: $app_color;
+  border:1px solid $app_color;
+  color:#E6DED3;
 }
 
 #tickets_new_btn {
-  background-color: #aaefd0;
-  border:1px solid #aaefd0;
-  border-radius: 25%;
-  color:#FFFAF0;
-  width:350px;
-  word-wrap: none;
+  background-color: $app_color;
+  border:1px solid $app_color;
+  color:#E6DED3;
+  padding:0px;
+  width:415px;
+  height:45px;
 }
 
 .btn-gradient {

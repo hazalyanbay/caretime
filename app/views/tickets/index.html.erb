@@ -1,24 +1,40 @@
 <h1 id='heading_contact'>Tickets</h1>
-<div class='table_whole'>
-  <table>
-    <tbody>
-      <tr>
-        <th>Issue Type</th>
-        <th>Status</th>
-        <th>Comment</th>
-        <th>Details Link</th>
-      </tr>
-    <% @tickets.each do |ticket| %>
-      <tr>
-        <td><%= ticket.issue_type %></td>
-        <td><%= ticket.status %></td>
-        <td><%= ticket.comment %></td>
-        <td><em><strong><%= link_to 'See the details', ticket_path(ticket) %></em></strong></td>
-      </tr>
-    <% end  %>
-    </tbody>
-  </table>
-  <div>
-    <%= link_to "Back to top", tickets_path, class: "btn btn-primary", id: "back_to"%>
-  </div>
+
+
+<% @tickets.each do |ticket| %>
+<button class="accordion"><%= "Ticket #{ticket.id}" %></button>
+<div class="panel">
+  <% if ticket.issue_type == "I'm in danger, I need help!" %>
+    <p id='ticket_data'><strong>Issue Type: </strong><%= ticket.issue_type = 'Police' %></p>
+  <% elsif ticket.issue_type == 'I want to use hidden live chat' %>
+    <p id='ticket_data'><strong>Issue Type: </strong><%= ticket.issue_type = 'Live Chat' %></p>
+  <% elsif ticket.issue_type == 'I want to speak to specialist via video chat'%>
+    <p id='ticket_data'><strong>Issue Type: </strong><%= ticket.issue_type = 'Video' %></p>
+  <% end %>
+    <p id='ticket_data'><strong>Status: </strong><%= ticket.status %></p>
+    <p id='ticket_data'><strong>Comment: </strong><%= ticket.comment %></p>
+    <p style='color:#1e3e2f;'><em><strong><%= link_to 'Details', ticket_path(ticket) %></em></strong></p>
 </div>
+<% end %>
+
+<div>
+  <%= link_to "Back to top", tickets_path, class: "btn btn-primary", id: "back_to"%>
+</div>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  let i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
