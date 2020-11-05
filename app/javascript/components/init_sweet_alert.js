@@ -29,7 +29,7 @@ const initSweetAlert = () => {
         e.preventDefault(); // <--- prevent form from submitting
         swal({
             title: "",
-            text: "You are about to speak with us on a live chat. Remember, you can hide chat at any moment and play the video to enter undercover mode",
+        text: `You are about to speak with us on a live chat. Remember, you can use plant button in the corner to hide chat at any moment and play the video to enter undercover mode`,
             icon: "warning",
             buttons: [
               'No, cancel it',
