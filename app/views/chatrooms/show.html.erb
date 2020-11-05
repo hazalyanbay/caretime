@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid mb-5">
   <div id="video_window">
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLo12_MvY3Yr1h7IEquOJb1n_X3h7m0LSc" height="300" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
@@ -23,7 +23,7 @@
     </div>
   <% end %>
 
-  <h5>Chat</h5>
+  <h5 id="chat">Chat</h5>
   <div data-controller="chatbox">
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>" data-target='chatbox.messages'>
       <% @chatroom.messages.each do |message| %>
@@ -33,19 +33,19 @@
 
 
     <%# WE NEED TO FIX THIS CHAT. IT SKIPS AUTHENTICATION TOKEN IN MESSAGES CONTROLLER! %>
-    <div class="mb-5">
+    <div class="mb-hidebtn">
       <%= simple_form_for([ @chatroom, @message ], remote: true, html: { data: { turbolinks: "false" } }) do |f| %>
         <%= f.input :content, input_html: { data: { target: "chatbox.input" } }, label: false, placeholder: "Write your message" %>
-        <%= f.submit "Send", class: "btn btn-gradient" %>
+        <%= f.submit "Send", class: "btn btn-gradient btn-block" %>
       <% end %>
     </div>
   </div>
 
-  <div>
+  <%# <div>
     <%= link_to "Edit Tickets", edit_ticket_path, class: "btn btn-primary", id:"chatroom_btn" %>
-    <%= link_to "Home", root_path, class: "btn btn-primary", id:"chatroom_btn" %>
-  </div>
+    <%# <%= link_to "Home", root_path, class: "btn btn-primary", id:"chatroom_btn" %>
+  <%# </div>  %>
 </div>
 <div class="fixed-bottom d-flex justify-content-end">
-  <a class="js-hidebtn" z-index: 5 href="#"><i class="far fa-eye-slash"></i></a>
+  <a class="js-hidebtn" z-index: 5 href="#"><i class="fas fa-seedling"></i></a>
 </div>

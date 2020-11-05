@@ -12,6 +12,12 @@ border-radius: 5px;
 word-wrap: break-word;
 }
 
+.message-container {
+  display: flex;
+  align-items: center;
+}
+
+
 .message-content:before {
   content: "";
   width: 0px;
