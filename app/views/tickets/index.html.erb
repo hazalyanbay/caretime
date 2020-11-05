@@ -6,7 +6,8 @@
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
           <% data_t = "#collapse#{ticket.id}" %>
-          <button class="btn btn-link" id='accordion_buttons' type="button" data-toggle="collapse" data-target='<%= data_t %>' aria-expanded='true' aria-controls='<%= data_t %>'>
+          <% data_c = "collapse#{ticket.id}" %>
+          <button class="btn btn-link" id='accordion_buttons' type="button" data-toggle="collapse" data-target='<%= data_t %>' aria-expanded='true' aria-controls='<%= data_c %>'>
             <% if ticket.issue_type == "I'm in danger, I need help!" %>
               <p id='ticket_data'><strong>Issue Type: </strong><%= ticket.issue_type = 'Police' %></p>
             <% elsif ticket.issue_type == 'I want to use hidden live chat' %>
@@ -19,7 +20,7 @@
         </h2>
       </div>
       <% div_id = "collapse#{ticket.id}"  %>
-      <div id='<%=div_id%>' class='collapse show' aria-labelledby='headingOne' data-parent='#accordionExample'>
+      <div id='<%=div_id%>' class='collapse hide' aria-labelledby='headingOne' data-parent='#accordionExample'>
         <div class="card-body">
           <p id='ticket_data'><strong>Comment: </strong><%= ticket.comment %></p>
           <p style='color:#1e3e2f;'><em><strong><%= link_to 'Details', ticket_path(ticket) %></em></strong></p>
