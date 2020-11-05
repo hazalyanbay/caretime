@@ -82,6 +82,12 @@ button:hover{
 }
 
 
+<<<<<<< HEAD
+=======
+  // margin-right: 10px;
+  // color: #1e3e2f;
+
+>>>>>>> 5c5814fddbe9c411619fef928214314b63aee33f
 
 a {
   text-decoration: none;
@@ -92,5 +98,17 @@ a:link, a:visited {
 
 .mb-hidebtn {
   margin-bottom: 100px;
+}
+
+#send_btn {
+  border:1px solid $app_color;
+  border-radius:25%;
+  margin-right:10px;
+  margin-left:130px;
+  background-color: $app_color;
+  color:#E6DED3;
+  width:100px;
+  font-weight: bold;
+  text-align: center;
 }
 

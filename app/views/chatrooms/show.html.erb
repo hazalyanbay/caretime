@@ -2,7 +2,7 @@
   <div id="video_window">
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLo12_MvY3Yr1h7IEquOJb1n_X3h7m0LSc" height="300" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
-  
+
   <div class="js-hiddenchat">
   <% if @ticket.issue_type == "I'm in danger, I need help!" %>
       <div>
@@ -36,7 +36,9 @@
     <div class="mb-hidebtn">
       <%= simple_form_for([ @chatroom, @message ], remote: true, html: { data: { turbolinks: "false" } }) do |f| %>
         <%= f.input :content, input_html: { data: { target: "chatbox.input" } }, label: false, placeholder: "Write your message" %>
-        <%= f.submit "Send", class: "btn btn-gradient btn-block" %>
+
+        <%= f.submit "Send", class: "btn btn-gradient" %>
+
       <% end %>
     </div>
   </div>
