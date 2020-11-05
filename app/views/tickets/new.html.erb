@@ -1,25 +1,22 @@
 <div class="container col-10" style='margin:0px; padding:0px;'>
-  <%= link_to "Read about domestic violence", information_path, class: "btn btn-success w-400 mt-3", id:"tickets_new_btn"%>
+  <%= link_to "Read about domestic violence", information_path, class: "btn btn-gradient w-300", id:"tickets_new_btn"%>
   <% Ticket.styles.each do |style| %>
     <%= simple_form_for(@ticket) do |f| %>
       <%= f.input :issue_type, as: :hidden, input_html: {value: style} %>
       <% if style == "I'm in danger, I need help!" %>
-        <%= f.submit style, class: "js-police btn btn-success w-300", id:"tickets_new_btn" %>
+        <%= f.submit style, class: "js-police btn btn-gradient w-300", id:"tickets_new_btn" %>
         <p style='font-size:16px; display: inline-block; width:400px; padding-left: 10px;'><em>If you are in danger, we immediatelly call the police when you press this button</em></p>
       <% elsif style == "I want to use hidden live chat" %>
-        <%= f.submit style, class: "js-chat btn btn-success w-300", id:"tickets_new_btn" %>
+        <%= f.submit style, class: "js-chat btn btn-gradient w-300", id:"tickets_new_btn" %>
         <p style='font-size:16px; display: inline-block; width:400px; padding-left: 10px;'><em>If you want to have a hidden chat with one of our specialists, press this button</em></p>
       <% else %>
-        <%= f.submit style, class: "js-video btn btn-success w-300", id:"tickets_new_btn"%>
+        <%= f.submit style, class: "js-video btn btn-gradient w-300", id:"tickets_new_btn"%>
         <p style='font-size:16px; display: inline-block; width:400px; padding-left: 10px;'><em>If you want to have a video chat with one of our specialists, press this button</em></p>
       <% end %>
     <% end %>
   <% end %>
 
   
-
-
-  <%= link_to "Read about domestic violence", information_path, class: "btn btn-success w-400 mt-3", id:"tickets_new_btn"%>
   <%# <div style='margin-top:20px;margin-left:30px;'>
 
     <%= link_to "Back", root_path, class: "btn btn-success mt-3", id:'back_to' %>

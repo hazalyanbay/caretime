@@ -1,12 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-#  create 5 workers/victims
-#  create solved tickets for the 5 victims (comments ec)
+require "open-uri"
+
 Chatroom.destroy_all
 Ticket.destroy_all
 User.destroy_all
@@ -21,7 +14,7 @@ workerfive = User.create!(worker: true, first_name: 'sy', last_name: 'dontknow',
 victimone = User.create!(worker: false, first_name: 'ayse', last_name: 'yany', phone_number: '5053678898', address: 'beyoglu', email: 'ayse@gmail.com', password: '555555')
 victimtwo = User.create!(worker: false, first_name: 'elif', last_name: 'eyey', phone_number: '5053678898', address: 'beyoglu', email: 'elif@gmail.com', password: '555555')
 victimthree = User.create!(worker: false, first_name: 'hazal', last_name: 'buse', phone_number: '5053678898', address: 'beyoglu', email: 'hazal@gmail.com', password: '555555')
-victimfour = User.create!(worker: false, first_name: 'selin', last_name: 'hürmüz', phone_number: '5053678898', address: 'beyoglu', email: 'selin@gmail.com', password: '555555')
+victimfour = User.create!(worker: false, first_name: 'Turkan', last_name: 'Cilek', phone_number: '5053678898', address: 'beyoglu', email: 'turkan@gmail.com', password: '555555')
 victimfive = User.create!(worker: false, first_name: 'serpil', last_name: 'demirci', phone_number: '5053678898', address: 'beyoglu', email: 'serpil@gmail.com', password: '555555')
 
 ticketone = Ticket.create!(issue_type: "I'm in danger, I need help!", status: 'solved', comment: "called the police, she is safe now", worker: workerone, victim: victimone)
@@ -38,4 +31,12 @@ contactthree = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667
 contactfour = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimfour)
 contactfive = Contact.create(full_name: 'Ayşe Güllü', phone_number: '5556667700',user:victimfive)
 contactsix = Contact.create(full_name: 'Ahmet Can', phone_number: '5556667788',user: workerone)
+
+file = URI.open('https://kitt.lewagon.com/placeholder/users/parnik74')
+workertwo.avatar.attach(io: file, filename: 'nes.jpeg', content_type: 'image/jpeg')
+workertwo.save
+
+file = URI.open('https://kitt.lewagon.com/placeholder/users/hazalyanbay')
+victimfour.avatar.attach(io: file, filename: 'nes.jpeg', content_type: 'image/jpeg')
+victimfour.save
 
