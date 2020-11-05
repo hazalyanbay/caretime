@@ -20,6 +20,11 @@
     background-color: #1e3e2f;
 }
 
+.swal-button--danger:not([disabled]):hover {
+    background-color: #1e3e2f;
+    color: white;
+}
+
 .swal-button {
     color:#c7ad88;
     border: none;
