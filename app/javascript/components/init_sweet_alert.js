@@ -33,7 +33,7 @@ const initSweetAlert = () => {
             icon: "warning",
             buttons: [
               'No, cancel it',
-              'Okay'
+              'OK'
             ],
             dangerMode: true,
           }).then(function(isConfirm) {
@@ -51,11 +51,11 @@ const initSweetAlert = () => {
         e.preventDefault(); // <--- prevent form from submitting
         swal({
             title: "",
-            text: "You are gonna talk with us on video chat. Remember, you can hide chat and watch video for undercover",
+            text: "You are gonna talk with us on video chat. Remember, you can use plant button in the corner to hide chat and play the video to enter undercover mode",
             icon: "warning",
             buttons: [
               'No, cancel it!',
-              'Okay!'
+              'OK'
             ],
             dangerMode: true,
           }).then(function(isConfirm) {
